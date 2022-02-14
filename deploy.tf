@@ -44,6 +44,7 @@ resource "aws_route_table" "prod-route-table" {
 }
 
 #4. Create a subnet
+
 resource "aws_subnet" "subnet-1" {
     vpc_id = aws_vpc.prod-vpc.id
     cidr_block = "10.0.1.0/24"
@@ -144,7 +145,7 @@ resource "aws_instance" "web-server-instance" {
                 sudo apt-get update -y
                 sudo apt install apache2 -y
                 sudo systmctl start apache2
-                sudo bash -c 'echo Hi Suraj This is your First Web Server using Terraform !!!!!!!!!!!! > /var/www/html/index.html'
+                sudo bash -c 'echo Hi Suraj... This is your First Web Server using Terraform !!!!!!!!!!!! > /var/www/html/index.html'
                 EOF
     tags = {
 

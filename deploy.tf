@@ -145,7 +145,7 @@ resource "aws_instance" "web-server-instance" {
                 sudo apt-get update -y
                 sudo apt install apache2 -y
                 sudo systmctl start apache2
-                sudo bash -c 'echo Hi Suraj... This is your First Web Server using Terraform !!!!!!!!!!!! > /var/www/html/index.html'
+                sudo bash -c 'echo Hi Suraj This is your First Web Server using Terraform !!!!!!!!!!!! > /var/www/html/index.html'
                 EOF
     tags = {
 
